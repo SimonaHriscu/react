@@ -1,0 +1,19 @@
+[{
+    "id":1,
+    "name":"Simona",
+    "address": "Grazer Damm"
+
+},
+{
+    "id":2,
+    "name":"Ovi",
+    "address": "Seestr"
+
+},
+{
+    "id":3,
+    "name":"Andreea",
+    "address": "Lansberger"
+
+}
+]
