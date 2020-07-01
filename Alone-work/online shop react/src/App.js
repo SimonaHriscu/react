@@ -10,6 +10,7 @@ export default class App extends Component {
       userInput: "",
       data: Data,
       searchData: [],
+      cartItems: 0,
     };
   }
   
@@ -42,7 +43,7 @@ export default class App extends Component {
   };
 
 //  filter button show ALL items
-  showAll= (e) => {
+  showAllHandle = (e) => {
     e.preventDefault();
     let newArr = this.state.data.filter((item) => {
        return item;
@@ -51,6 +52,18 @@ export default class App extends Component {
       searchData: newArr,
     });
   };
+  
+  //no of items in the cart
+  cartNumHandle = (prevState) => {
+
+    this.setState(prevState => {
+      return {cartItems: prevState.cartItems ++}
+   })
+    console.log(this.state.cartItems);
+  };
+
+
+  
 
   changeHandle = (e) => {
     // console.log(e.target.value.trim())
@@ -79,7 +92,9 @@ export default class App extends Component {
       <React.Fragment>
         <Header filterUnderTen={this.filterUnderTenHandle }
         filterOverTen = {this.filterOverTenHandle}
-        showAll = {this.showAll}/>
+        showAll = {this.showAllHandle}
+        cartItem ={this.state.cartItems}
+       />
         <div className="container">
           <h1>Welcome to our online store</h1>
           <form onKeyUp={this.submitHandle}>
@@ -96,6 +111,7 @@ export default class App extends Component {
               this.state.userInput ? this.state.searchData : this.state.data
             }
             data={this.state.searchData ? this.state.searchData: this.state.data}
+            cartItem = {this.cartNumHandle}
           />
         </div>
       </React.Fragment>

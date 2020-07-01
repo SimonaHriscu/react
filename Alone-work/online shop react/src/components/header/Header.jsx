@@ -19,7 +19,7 @@ const Header = (props) => {
       <div className="cart">
         <i className="fas fa-concierge-bell"></i>
         <div className="order-status">ORDER STATUS</div>
-        <div className="items-no">0</div>
+        <div className="items-no">{props.cartItem}</div>
       </div>
     </nav>
   );
