@@ -13,7 +13,7 @@ export default class App extends Component {
     };
   }
   
-
+// Filter button under 10$
   filterUnderTenHandle = (e) => {
     e.preventDefault();
 
@@ -28,6 +28,7 @@ export default class App extends Component {
     });
   };
 
+//Filter button over 10$
   filterOverTenHandle= (e) => {
     e.preventDefault();
     let newArr = this.state.data.filter((item) => {
@@ -40,12 +41,11 @@ export default class App extends Component {
     });
   };
 
+//  filter button show ALL items
   showAll= (e) => {
     e.preventDefault();
     let newArr = this.state.data.filter((item) => {
-      
-        return item;
-      
+       return item;
     });
     this.setState({
       searchData: newArr,
@@ -59,6 +59,7 @@ export default class App extends Component {
     });
   };
 
+  //Search filter
   submitHandle = (e) => {
     e.preventDefault();
     const userText = this.state.userInput.toLocaleLowerCase();
@@ -72,6 +73,7 @@ export default class App extends Component {
     });
   };
 
+  
   render() {
     return (
       <React.Fragment>
