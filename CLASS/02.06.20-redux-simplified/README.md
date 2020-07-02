@@ -1,3 +1,11 @@
+# Redux simplified: data flow + increment, decrement, nameChange actions
+
+
+## Preview:
+
+![Imgur](https://i.imgur.com/pa7sbuy.png)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
