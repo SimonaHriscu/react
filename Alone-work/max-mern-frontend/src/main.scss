@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 @import './user/components/userItem';
 @import './user/components/usersList';
-
-* {
-  box-sizing: border-box;
-}
+@import './shared/components/UIElements/Avatar.scss';
+@import './shared/components/UIElements/Card.scss';
+@import './shared/components/UIElements/Backdrop.scss';
+@import './shared/components/Navigation/MainHeader.scss';
+@import './shared/components/Navigation/MainNavigation.scss';
+@import './shared/components/Navigation/NavLinks.scss';
+@import './shared/components/Navigation/SideDrawer.scss';
 
 html {
   font-family: 'Open Sans', sans-serif;
